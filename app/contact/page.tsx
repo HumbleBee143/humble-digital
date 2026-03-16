@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import CTABanner from '@/components/CTABanner'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact — Humble Digital',
@@ -70,44 +71,7 @@ export default function Contact() {
             <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-2">Drop Me a Message</p>
             <h3 className="text-2xl font-bold mb-8">Fill out the form and I&apos;ll get back to you soon</h3>
 
-            <form className="space-y-5" action="mailto:matthew@humbledigital.co.uk" method="post" encType="text/plain">
-              <div>
-                <label className="block text-xs text-white/40 uppercase tracking-wider mb-2">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-white/20 focus:border-gold transition-colors outline-none"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-xs text-white/40 uppercase tracking-wider mb-2">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-white/20 focus:border-gold transition-colors outline-none"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-xs text-white/40 uppercase tracking-wider mb-2">Message</label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="Tell me about your project..."
-                  className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-white/20 focus:border-gold transition-colors outline-none resize-none"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full py-4 bg-gold text-dark font-bold text-sm tracking-wide hover:bg-gold-light transition-colors duration-200"
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
