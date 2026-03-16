@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import CTABanner from '@/components/CTABanner'
 import ContactForm from '@/components/ContactForm'
+import AnimateIn from '@/components/AnimateIn'
 
 export const metadata: Metadata = {
   title: 'Contact — Humble Digital',
@@ -12,9 +13,15 @@ export default function Contact() {
     <>
       {/* ── Header ── */}
       <section className="pt-20 pb-4 px-6 max-w-6xl mx-auto">
-        <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-4">Get In Touch</p>
-        <h1 className="text-4xl md:text-5xl font-bold mb-3">Get in Touch</h1>
-        <p className="text-white/50 text-lg">Drop me a message and I&apos;ll get back to you soon.</p>
+        <AnimateIn delay={0}>
+          <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-4">Get In Touch</p>
+        </AnimateIn>
+        <AnimateIn delay={100}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">Get in Touch</h1>
+        </AnimateIn>
+        <AnimateIn delay={200}>
+          <p className="text-white/50 text-lg">Drop me a message and I&apos;ll get back to you soon.</p>
+        </AnimateIn>
       </section>
 
       {/* ── Contact section ── */}
@@ -22,6 +29,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
 
           {/* Left — contact details */}
+          <AnimateIn delay={100} direction="left">
           <div className="space-y-8">
             <div>
               <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-6">Reach Out</p>
@@ -65,14 +73,17 @@ export default function Contact() {
               </p>
             </div>
           </div>
+          </AnimateIn>
 
           {/* Right — form */}
+          <AnimateIn delay={200} direction="right">
           <div className="bg-dark-card border border-white/5 rounded-xl p-8">
             <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-2">Drop Me a Message</p>
             <h3 className="text-2xl font-bold mb-8">Fill out the form and I&apos;ll get back to you soon</h3>
 
             <ContactForm />
           </div>
+          </AnimateIn>
         </div>
       </section>
 
