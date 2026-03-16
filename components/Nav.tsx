@@ -24,9 +24,9 @@ export default function Nav() {
             className="rounded-full flex-shrink-0"
             priority
           />
-          <div className="flex flex-col leading-none">
-            <span className="text-white font-bold text-sm tracking-widest uppercase">Humble</span>
-            <span className="text-gold font-bold text-sm tracking-widest uppercase">Digital</span>
+          <div className="flex flex-col leading-tight">
+            <span className="text-white font-bold text-xl tracking-widest uppercase">Humble</span>
+            <span className="text-gold font-bold text-xl tracking-widest uppercase">Digital</span>
           </div>
         </Link>
 
