@@ -23,7 +23,7 @@ export async function submitContact(
 
   try {
     await resend.emails.send({
-      from: 'Humble Digital <contact@humbledigital.co.uk>',
+      from: 'Humble Digital <contact@mail.humbledigital.co.uk>',
       to: 'matthew@humbledigital.co.uk',
       replyTo: email,
       subject: `New enquiry from ${name}`,
