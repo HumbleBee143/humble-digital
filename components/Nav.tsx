@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
@@ -14,14 +15,15 @@ export default function Nav() {
     <header className="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-dark-navy flex items-center justify-center border-2 border-dark-navy flex-shrink-0">
-            <span className="text-gold font-display font-bold text-lg leading-none">H</span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-white font-bold text-sm tracking-widest uppercase">Humble</span>
-            <span className="text-gold font-bold text-sm tracking-widest uppercase">Digital</span>
-          </div>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/logo.png"
+            alt="Humble Digital"
+            width={56}
+            height={56}
+            className="rounded-full"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}
