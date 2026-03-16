@@ -15,7 +15,7 @@ export default function Nav() {
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-full bg-[#1a2744] flex items-center justify-center flex-shrink-0">
+          <div className="w-11 h-11 rounded-full bg-gold flex items-center justify-center flex-shrink-0">
             <span className="text-white font-script text-3xl" style={{ lineHeight: 1 }}>H</span>
           </div>
           <div className="flex flex-col leading-tight">
