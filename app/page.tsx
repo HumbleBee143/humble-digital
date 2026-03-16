@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import CTABanner from '@/components/CTABanner'
 import AnimateIn from '@/components/AnimateIn'
+import StatsCarousel from '@/components/StatsCarousel'
 
 export default function Home() {
   return (
@@ -32,8 +33,11 @@ export default function Home() {
 
       {/* ── About ── */}
       <section id="about" className="bg-dark-card py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <AnimateIn>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <AnimateIn direction="left">
+            <StatsCarousel />
+          </AnimateIn>
+          <AnimateIn direction="right">
             <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-3">About Me</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               The Story Behind<br />Humble Digital
