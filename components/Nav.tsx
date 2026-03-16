@@ -15,15 +15,19 @@ export default function Nav() {
     <header className="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center group">
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.png"
             alt="Humble Digital"
-            width={56}
-            height={56}
-            className="rounded-full"
+            width={48}
+            height={48}
+            className="rounded-full flex-shrink-0"
             priority
           />
+          <div className="flex flex-col leading-none">
+            <span className="text-white font-bold text-sm tracking-widest uppercase">Humble</span>
+            <span className="text-gold font-bold text-sm tracking-widest uppercase">Digital</span>
+          </div>
         </Link>
 
         {/* Desktop links */}
