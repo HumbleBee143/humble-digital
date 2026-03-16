@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CTABanner from '@/components/CTABanner'
+import AnimateIn from '@/components/AnimateIn'
 
 export const metadata: Metadata = {
   title: 'Pricing — Humble Digital',
@@ -76,10 +77,14 @@ export default function Pricing() {
     <>
       {/* ── Header ── */}
       <section className="pt-20 pb-4 px-6 max-w-6xl mx-auto">
-        <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-4">Pricing</p>
-        <h1 className="text-4xl md:text-5xl font-bold max-w-2xl leading-tight">
-          Choose a package that fits your goals — all built to make your business look great online.
-        </h1>
+        <AnimateIn delay={0}>
+          <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-4">Pricing</p>
+        </AnimateIn>
+        <AnimateIn delay={100}>
+          <h1 className="text-4xl md:text-5xl font-bold max-w-2xl leading-tight">
+            Choose a package that fits your goals — all built to make your business look great online.
+          </h1>
+        </AnimateIn>
       </section>
 
       {/* ── Pricing cards ── */}
@@ -87,12 +92,12 @@ export default function Pricing() {
         <div className="max-w-6xl mx-auto">
           <div className="pricing-grid">
             {packages.map((pkg, i) => (
+              <AnimateIn key={pkg.tier} delay={i * 120} className={pkg.highlight ? 'pricing-card-mid' : ''}>
               <div
-                key={pkg.tier}
                 className={`
-                  rounded-xl border p-8 flex flex-col gap-6 transition-all duration-300
+                  rounded-xl border p-8 flex flex-col gap-6 transition-all duration-300 h-full
                   ${pkg.highlight
-                    ? 'bg-dark-card-2 border-gold/40 shadow-[0_0_40px_rgba(201,147,58,0.12)] pricing-card-mid'
+                    ? 'bg-dark-card-2 border-gold/40 shadow-[0_0_40px_rgba(201,147,58,0.12)]'
                     : 'bg-dark-card border-white/5 hover:border-gold/20'
                   }
                 `}
@@ -148,6 +153,7 @@ export default function Pricing() {
                   Get Started
                 </Link>
               </div>
+              </AnimateIn>
             ))}
           </div>
         </div>
@@ -156,13 +162,15 @@ export default function Pricing() {
       {/* ── Example sites ── */}
       <section className="py-16 px-6 bg-dark-card">
         <div className="max-w-6xl mx-auto">
-          <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-3">Example Sites</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Take a look and see what is possible!</h2>
+          <AnimateIn delay={0}>
+            <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-3">Example Sites</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Take a look and see what is possible!</h2>
+          </AnimateIn>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {demos.map((demo) => (
+            {demos.map((demo, i) => (
+              <AnimateIn key={demo.label} delay={i * 100}>
               <div
-                key={demo.label}
                 className="bg-[#1a1a1a] border border-white/5 rounded-xl p-8 hover:border-gold/20 transition-colors duration-200"
               >
                 <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-3">{demo.label}</p>
@@ -179,6 +187,7 @@ export default function Pricing() {
                   </svg>
                 </a>
               </div>
+              </AnimateIn>
             ))}
           </div>
         </div>
