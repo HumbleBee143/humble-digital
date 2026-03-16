@@ -15,9 +15,10 @@ export default function Nav() {
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-full bg-dark-card border-2 border-gold flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-display italic text-2xl" style={{ lineHeight: 1, paddingBottom: '0.15em' }}>H</span>
-          </div>
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+            <circle cx="22" cy="22" r="21" fill="#222222" stroke="#c9933a" strokeWidth="2"/>
+            <text x="22" y="30" textAnchor="middle" fontFamily="Georgia, 'Times New Roman', serif" fontStyle="italic" fontWeight="700" fontSize="24" fill="white">H</text>
+          </svg>
           <div className="flex flex-col leading-tight">
             <span className="text-white font-bold text-xl tracking-widest uppercase">Humble</span>
             <span className="text-gold font-bold text-xl tracking-widest uppercase">Digital</span>
