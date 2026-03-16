@@ -20,6 +20,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-outfit)', 'Helvetica Neue', 'sans-serif'],
         display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        script: ['var(--font-script)', 'cursive'],
       },
     },
   },

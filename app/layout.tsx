@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Outfit, Playfair_Display } from 'next/font/google'
+import { Outfit, Playfair_Display, Great_Vibes } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -16,6 +16,13 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  variable: '--font-script',
+  weight: ['400'],
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'Humble Digital — Affordable Web Design',
   description: 'Friendly, affordable web design for small businesses, coaches, and individuals. Modern websites built fast.',
@@ -28,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${playfair.variable} ${greatVibes.variable}`}>
       <body className="bg-dark text-white font-sans antialiased">
         <Nav />
         <main>{children}</main>
