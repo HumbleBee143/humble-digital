@@ -36,14 +36,23 @@ export default function Home() {
           <AnimateIn direction="left">
             <div className="relative">
               <div className="aspect-square max-w-sm mx-auto md:mx-0 bg-[#2a2a2a] rounded-2xl overflow-hidden border border-white/5">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 rounded-full bg-dark-navy mx-auto flex items-center justify-center mb-3">
-                      <span className="text-gold font-display font-bold text-3xl">H</span>
-                    </div>
-                    <p className="text-white/30 text-sm">Photo coming soon</p>
-                  </div>
-                </div>
+                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <rect width="400" height="400" fill="#222222"/>
+                  {/* Body */}
+                  <ellipse cx="200" cy="420" rx="130" ry="90" fill="#2e2e2e"/>
+                  {/* Shirt/jacket */}
+                  <path d="M110 370 Q140 320 200 310 Q260 320 290 370 Q270 400 200 410 Q130 400 110 370Z" fill="#1a2744"/>
+                  {/* Collar */}
+                  <path d="M185 310 L200 340 L215 310 Q200 295 185 310Z" fill="#f0f0f0" opacity="0.15"/>
+                  {/* Head */}
+                  <circle cx="200" cy="195" r="75" fill="#2e2e2e"/>
+                  {/* Face shading */}
+                  <circle cx="200" cy="200" r="68" fill="#333333"/>
+                  {/* Neck */}
+                  <rect x="178" y="258" width="44" height="55" rx="8" fill="#2e2e2e"/>
+                  {/* Gold accent line at bottom */}
+                  <rect x="0" y="395" width="400" height="5" fill="#c9933a" opacity="0.4"/>
+                </svg>
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold/30 rounded-br-lg hidden md:block" />
             </div>
