@@ -103,21 +103,41 @@ body {
   width: 100%;
 }
 
-/* Section fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Hero entrance animations */
+@keyframes heroLabel {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroHeading {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroSub {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroCta {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in {
-  animation: fadeInUp 0.6s ease forwards;
+.hero-label   { animation: heroLabel   0.5s ease 0.1s both; }
+.hero-heading { animation: heroHeading 0.6s ease 0.25s both; }
+.hero-sub     { animation: heroSub     0.6s ease 0.45s both; }
+.hero-cta     { animation: heroCta     0.5s ease 0.65s both; }
+
+/* Gold shimmer on hover for CTA buttons */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
+
+/* Nav slide down */
+@keyframes navSlideDown {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-enter { animation: navSlideDown 0.4s ease forwards; }
 
 /* Glow effect on gold elements */
 .gold-glow {

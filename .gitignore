@@ -7,3 +7,4 @@ node_modules/
 theme/
 custom-css-js/
 htaccess.txt
+.vercel

@@ -11,7 +11,7 @@ export default function Nav() {
   const isHome = pathname === '/'
 
   return (
-    <header className="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-white/5">
+    <header className="nav-enter sticky top-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-white/5">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
