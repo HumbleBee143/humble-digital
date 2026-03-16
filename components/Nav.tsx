@@ -16,7 +16,7 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-11 h-11 rounded-full bg-dark-card border-2 border-gold flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-display italic text-2xl" style={{ lineHeight: 1 }}>H</span>
+            <span className="text-white font-display italic text-2xl" style={{ lineHeight: 1, paddingBottom: '0.15em' }}>H</span>
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-white font-bold text-xl tracking-widest uppercase">Humble</span>
