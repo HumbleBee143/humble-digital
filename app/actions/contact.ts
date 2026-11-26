@@ -22,7 +22,7 @@ export async function submitContact(
   }
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Humble Digital <contact@mail.humbledigital.co.uk>',
       to: 'matthew@humbledigital.co.uk',
       replyTo: email,
@@ -37,6 +37,11 @@ export async function submitContact(
         </div>
       `,
     })
+
+    if (error) {
+      console.error('Resend error:', error)
+      return { success: false, message: 'Something went wrong. Please try emailing me directly.' }
+    }
 
     return { success: true, message: "Message sent — I'll be in touch soon!" }
   } catch (error) {
