@@ -5,7 +5,7 @@ import AnimateIn from '@/components/AnimateIn'
 
 export const metadata: Metadata = {
   title: 'Pricing — Humble Digital',
-  description: 'Transparent, affordable web design pricing. Starter sites from £75, full business packages from £300.',
+  description: 'Transparent, affordable web design pricing. Starter sites from £95, full business packages from £375.',
 }
 
 const packages = [
@@ -13,7 +13,7 @@ const packages = [
     tier: 'Basic',
     subtitle: 'Starter Website',
     desc: 'A simple, one-page website to get your business online fast.',
-    price: '£75',
+    price: '£95',
     delivery: '3 days',
     revisions: '2',
     includes: [
@@ -27,7 +27,7 @@ const packages = [
     tier: 'Standard',
     subtitle: 'Professional Website',
     desc: 'A full, multi-section website designed to showcase your brand and services.',
-    price: '£180',
+    price: '£225',
     delivery: '5 days',
     revisions: '3',
     includes: [
@@ -42,7 +42,7 @@ const packages = [
     tier: 'Premium',
     subtitle: 'Complete Business Website',
     desc: 'A complete, custom-designed website ready for business growth.',
-    price: '£300',
+    price: '£375',
     delivery: '7 days',
     revisions: '5',
     includes: [
@@ -59,16 +59,16 @@ const packages = [
 
 const demos = [
   {
-    label: 'Demo 1',
+    label: 'Basic tier example',
     type: 'Construction',
-    url: 'humbledigitaldemo.great-site.net',
-    href: 'https://humbledigitaldemo.great-site.net',
+    url: 'thornfield-construction.humbledigital.co.uk',
+    href: 'https://thornfield-construction.humbledigital.co.uk',
   },
   {
-    label: 'Demo 2',
+    label: 'Standard tier example',
     type: 'Coaching',
-    url: 'humbledigitaldemo2.great-site.net',
-    href: 'https://humbledigitaldemo2.great-site.net',
+    url: 'elena-coaching.humbledigital.co.uk',
+    href: 'https://elena-coaching.humbledigital.co.uk',
   },
 ]
 
